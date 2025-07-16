@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prefab: {fileID: 1590415177872986601, guid: acdb90624a404aa438447006f1026065, type: 3}
+  _parent: {fileID: 0}
 --- !u!1001 &4667130659255257545
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -222,4 +223,4 @@ MonoBehaviour:
   _animator: {fileID: 4640137192120540544}
   _appearAnimationName: CoinAppear
   _disappearAnimationName: CoinDisappear
-  _secondsToDisappear: 20
+  _secondsToDisappear: 2
