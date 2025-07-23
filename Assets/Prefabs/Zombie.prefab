@@ -830,6 +830,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0f07861cad1b62e44b48373786672ab1, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 1189529853000058984, guid: 0f07861cad1b62e44b48373786672ab1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 21.737804
@@ -1110,6 +1114,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0f07861cad1b62e44b48373786672ab1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8352411762909421257}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0f07861cad1b62e44b48373786672ab1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5254446988702439035}
   m_SourcePrefab: {fileID: 100100000, guid: 0f07861cad1b62e44b48373786672ab1, type: 3}
 --- !u!1 &2762575927040622896 stripped
 GameObject:
@@ -1157,7 +1164,19 @@ MonoBehaviour:
       m_Calls: []
   _onDie:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8352411762909421257}
+        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
+        m_MethodName: Die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8352411762909421257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1173,6 +1192,42 @@ MonoBehaviour:
   _animator: {fileID: 7229615034208170218}
   _enemyData: {fileID: 11400000, guid: ff12ed05a6fdfa64dbf20e1a2dd1b8e5, type: 2}
   _targetTag: Tower
+  _onInitialized:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4348618415531603144}
+        m_TargetAssemblyTypeName: Health, Assembly-CSharp
+        m_MethodName: InitializeHealth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!65 &5254446988702439035
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2762575927040622896}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2.61, z: 1}
+  m_Center: {x: 0, y: 1.08, z: 0}
 --- !u!4 &3250882632002378634 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0f07861cad1b62e44b48373786672ab1, type: 3}
